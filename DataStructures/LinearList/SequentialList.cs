@@ -265,12 +265,6 @@ namespace DataStructures.LinearList
 			}
 		}
 
-		IEnumerator IEnumerable.GetEnumerator()
-		{
-			for (int i = 0; i < Count; i++)
-			{
-				yield return _array[i];
-			}
-		}
+		IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 	}
 }
