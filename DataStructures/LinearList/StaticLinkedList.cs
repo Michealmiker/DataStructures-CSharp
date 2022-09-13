@@ -13,7 +13,7 @@ namespace DataStructures.LinearList
         /// <summary>
         /// 容量
         /// </summary>
-        public int Capacity { get; private set; }
+        public int Capacity { get; }
         
         /// <summary>
         /// 表长
@@ -117,6 +117,11 @@ namespace DataStructures.LinearList
 	        Count++;
         }
 
+        /// <summary>
+        /// 获取闲置节点的下标
+        /// </summary>
+        /// <returns>闲置节点的下标</returns>
+        /// <exception cref="InvalidOperationException"></exception>
         private int GetNodeCursor()
         {
 	        if (_unusedFirstCursor == NullCursor)
