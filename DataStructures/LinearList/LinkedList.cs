@@ -116,6 +116,34 @@ namespace DataStructures.LinearList
 		}
 
 		/// <summary>
+		/// 获取指定位置的元素
+		/// </summary>
+		/// <param name="index">指定位置（基于1）</param>
+		/// <returns>指定位置的元素</returns>
+		/// <exception cref="ArgumentOutOfRangeException"></exception>
+		public T GetElement(int index)
+		{
+			if (index < 1 || index > Count)
+			{
+				throw new ArgumentOutOfRangeException($"{nameof(index)}:{index} is out of range");
+			}
+
+			if (index == 1)
+			{
+				return _head.Data;
+			}
+
+			var ptr = _head;
+
+			for (int i = 1; i < index; i++)
+			{
+				ptr = ptr.Next;
+			}
+
+			return ptr.Data;
+		}
+
+		/// <summary>
 		/// 删除指定元素
 		/// </summary>
 		/// <param name="item">指定元素</param>
