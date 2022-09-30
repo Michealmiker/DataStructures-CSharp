@@ -22,12 +22,12 @@ namespace DataStructures.LinearList.Stack
         public int Count { get; private set; }
 
         /// <summary>
-        /// 表是否为空
+        /// 栈是否为空
         /// </summary>
         public bool IsEmpty => Count == 0;
 
         /// <summary>
-        /// 表内容
+        /// 栈内容
         /// </summary>
         private T[] _array;
         
@@ -42,17 +42,17 @@ namespace DataStructures.LinearList.Stack
         private int _topCursor = NullCursor;
         
         /// <summary>
-        /// 表初始化容量
+        /// 栈初始化容量
         /// </summary>
         private const int StackInitSize = 1000;
         
         /// <summary>
-        /// 表增量容量
+        /// 栈增量容量
         /// </summary>
         private const int StackIncrementSize = 4;
         
         /// <summary>
-        /// 表尾游标
+        /// 栈尾游标
         /// </summary>
         private const int NullCursor = -1;
         
@@ -127,7 +127,7 @@ namespace DataStructures.LinearList.Stack
         /// <summary>
         /// 获取栈顶元素
         /// </summary>
-        /// <returns></returns>
+        /// <returns>栈顶元素</returns>
         /// <exception cref="InvalidOperationException"></exception>
         public T Peek()
         {
@@ -137,6 +137,16 @@ namespace DataStructures.LinearList.Stack
             }
 
             return _array[_topCursor - 1];
+        }
+
+        /// <summary>
+        /// 清空栈
+        /// </summary>
+        public void Clear()
+        {
+            _topCursor = _baseCursor;
+
+            Count = 0;
         }
 
         /// <summary>
