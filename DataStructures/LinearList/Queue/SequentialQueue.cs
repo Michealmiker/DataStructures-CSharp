@@ -118,6 +118,16 @@ namespace DataStructures.LinearList.Queue
         }
 
         /// <summary>
+        /// 清空队列
+        /// </summary>
+        public void Clear()
+        {
+            _rearCursor = _frontCursor;
+
+            Count--;
+        }
+
+        /// <summary>
         /// 格式化字符串
         /// </summary>
         /// <returns></returns>
