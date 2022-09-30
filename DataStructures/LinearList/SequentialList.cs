@@ -69,6 +69,7 @@ namespace DataStructures.LinearList
 		/// 表初始化容量
 		/// </summary>
 		private const int ListInitSize = 2;
+		
 		/// <summary>
 		/// 表增量容量
 		/// </summary>

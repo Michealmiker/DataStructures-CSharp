@@ -44,6 +44,7 @@ namespace DataStructures.LinearList
         /// 表初始化容量
         /// </summary>
         private const int ListInitSize = 1000;
+        
         /// <summary>
 		/// 表尾游标
 		/// </summary>
